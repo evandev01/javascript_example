@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+
+    <div class="buttonDiv">
+      <button id="change-button" onclick="displayContent()">Do Something</button>
+    </div>
+
+    <div class="buttonDiv">
+      <button id="change-button" onclick="removeContent()">Undo Something</button>
+    </div>
+
+    <div id="contentDiv" class="content"></div>
+  </div>
+</body>
+<script src="index.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  /**
+   * Function that accesses the button element with the ID of 'change-button'
+   * Adds an event listener to that button that tells the compiler, if this button is clicked, "do something"
+   */
+
+  /**
+   * Solution 1
+   */
+// document.getElementById('change-button').addEventListener('click', function () {
+// 	console.log('clicked')
+// })
+
+  /**
+   * Solution 2
+   */
+
+// var changeButton = document.getElementById('change-button')
+
+// changeButton.addEventListener('click', function () {
+// 	console.log('clicked')
+// })
+
+  /**
+   * Solution 3
+   */
+
+// function logger() {
+// 	console.log('clicked')
+// }
+</script>
+
+</html>

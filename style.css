@@ -1,0 +1,34 @@
+body {
+	background-color: gray;
+}
+.main {
+	margin-top: 4rem;
+	display: flex;
+	flex-direction: column;
+}
+button {
+	width: 200px;
+	height: 100px;
+	color: black;
+	font-size: large;
+	background-color: rgb(69, 252, 69);
+}
+button:hover {
+	width: 200px;
+	height: 100px;
+	color: white;
+	font-size: large;
+	background-color: rgb(101, 107, 101);
+}
+.buttonDiv {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
