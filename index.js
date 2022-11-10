@@ -38,3 +38,43 @@ function displayContent() {
 function removeContent() {
 	document.getElementById('contentDiv').innerHTML = ''
 }
+
+var isTimeout = false
+
+function changeBackground() {
+	isTimeout = true
+
+	if (isInterval) {
+		stopInterval()
+	}
+
+	setTimeout(function () {
+		document.body.style.backgroundColor = 'rgb(82, 219, 240)'
+	}, 2000)
+}
+
+var colors = ['blue', 'black', 'gray']
+var i = 0
+var isInterval = false
+var intervalId
+
+console.log(isTimeout)
+
+function startInterval() {
+	isInterval = true
+
+	intervalId = setInterval(function () {
+		document.body.style.backgroundColor = colors[i]
+		i++
+
+		if (i > colors.length - 1) {
+			i = 0
+		}
+	}, 2000)
+}
+
+function stopInterval() {
+	isInterval = false
+
+	clearInterval(intervalId)
+}

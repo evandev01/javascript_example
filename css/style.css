@@ -1,10 +1,15 @@
 body {
 	background-color: gray;
 }
+h1 {
+	color: rgb(69, 252, 69);
+	text-shadow: 1px 1px 2px black;
+}
 .main {
 	margin-top: 4rem;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 button {
 	width: 200px;
@@ -31,4 +36,29 @@ button:hover {
 	justify-content: center;
 	align-items: center;
 	color: white;
+}
+
+/* NAVBAR */
+.nav {
+	height: 4rem;
+	padding: 1rem;
+}
+.nav-link {
+	width: 2rem;
+	text-align: center;
+}
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	justify-content: center;
+}
+.nav-item a {
+	text-align: center;
+	padding: 1rem;
+	font-size: large;
+	font-weight: bold;
+	text-decoration: none;
 }

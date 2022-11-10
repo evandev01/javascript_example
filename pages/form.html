@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <title>Bootstrap Form JavaScript Example</title>
+</head>
+
+<body style="background-color: gray;">
+  <div class="container mt-5 h-100">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="form.html">Form</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="timing.html">Timing</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="text-center">Bootstrap Form</h1>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <form onsubmit="submitHandler(event)">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password1" placeholder="Password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="formData" id="formData">
+      <h3 id="email-h3" class="text-center"></h3>
+      <h3 id="password-h3" class="text-center"></h3>
+    </div>
+
+    <script>
+
+      function submitHandler(event) {
+        event.preventDefault()
+
+        var email1 = document.getElementById("email1").value
+        var password1 = document.getElementById("password1").value
+        var emailH3 = document.getElementById("email-h3").innerText
+        var passwordH3 = document.getElementById("password-h3").innerText
+
+        console.log(`email: ${email1}` + `\n` + `password: ${password1}`)
+
+        document.getElementById("email-h3").innerText = email1
+        document.getElementById("password-h3").innerText = password1
+      }
+    </script>
+</body>
+
+</html>
